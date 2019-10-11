@@ -11,7 +11,7 @@ requirement: pytorch 0.4.1(or higher)
 
 2) cd  style-transfer-JC/neural_style/  
 
-3)transfer the style from a **style image**(e.g., candy, mosaic etc) to a **content-image**(eg., your beautiful gf!). 
+3) transfer the style from a **style image**(e.g., candy, mosaic etc) to a **content-image**(eg., your beautiful gf!). 
 
 Suppose the content image is amber.jpg,  the style image is candy, the corresponding pretrained model should be candy.pth, save the transferred image to the output-images/ with name amber_content.jpy( or your sweet gf.jpg!).  Check the generated image as  amber_content.jpg.
  
