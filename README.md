@@ -17,7 +17,7 @@ Suppose the content image is amber.jpg,  the style image is candy, the correspon
  
 Enjoy!!  
 
-```python
+```
 python  neural_style.py eval --content-image ../images/content-images/amber.jpg --model ../saved_models/candy.pth --output-image ../images/output-images/amber_candy.jpg 
 ```
 
