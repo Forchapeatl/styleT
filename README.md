@@ -17,12 +17,16 @@ Suppose the content image is amber.jpg,  the style image is candy, the correspon
  
 Enjoy!!  
 
-python```
+```python
 python  neural_style.py eval --content-image ../images/content-images/amber.jpg --model ../saved_models/candy.pth --output-image ../images/output-images/amber_candy.jpg 
 ```
 
+
+
+
+
 ----------------------------------
-original link: https://github.com/pytorch/examples/tree/master/fast_neural_style
+Here is the original link: https://github.com/pytorch/examples/tree/master/fast_neural_style
 -------------------------------- 
 This repository contains a pytorch implementation of an algorithm for artistic style transfer. The algorithm can be used to mix the content of an image with the style of another image. For example, here is a photograph of a door arch rendered in the style of a stained glass painting.
 
