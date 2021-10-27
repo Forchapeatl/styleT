@@ -195,15 +195,15 @@ def main():
                                   help="set it to 1 for running on GPU, 0 for CPU")
     train_arg_parser.add_argument("--seed", type=int, default=42,
                                   help="random seed for training")
-    train_arg_parser.add_argument("--content-weight", type=float, default=100,
+    train_arg_parser.add_argument("--content-weight", type=float, default=1e5,
                                   help="weight for content-loss, default is 1e5")
-    train_arg_parser.add_argument("--style-weight", type=float, default=1500,
+    train_arg_parser.add_argument("--style-weight", type=float, default=1e10,
                                   help="weight for style-loss, default is 1e10")
     train_arg_parser.add_argument("--lr", type=float, default=1e-3,
                                   help="learning rate, default is 1e-3")
     train_arg_parser.add_argument("--log-interval", type=int, default=500,
                                   help="number of images after which the training loss is logged, default is 500")
-    train_arg_parser.add_argument("--checkpoint-interval", type=int, default=2000,
+    train_arg_parser.add_argument("--checkpoint-interval", type=int, default=10,
                                   help="number of batches after which a checkpoint of the trained model will be created")
 
     eval_arg_parser = subparsers.add_parser("eval", help="parser for evaluation/stylizing arguments")
