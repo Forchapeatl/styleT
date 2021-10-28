@@ -52,7 +52,7 @@ def train(args):
         transforms.ToTensor(),
         transforms.Lambda(lambda x: x.mul(255))
     ])
-    style = utils.load_image(args.style_image, size=2.0 * args.style_size)
+    style = utils.load_image(args.style_image, size=args.style_size)
     style = style_transform(style)
     style = style.repeat(args.batch_size, 1, 1, 1).to(device)
 
@@ -189,7 +189,7 @@ def main():
                                   help="path to folder where checkpoints of trained models will be saved")
     train_arg_parser.add_argument("--image-size", type=int, default=256,
                                   help="size of training images, default is 256 X 256")
-    train_arg_parser.add_argument("--style-size", type=int, default=None,
+    train_arg_parser.add_argument("--style-size", type=int, default=1800,
                                   help="size of style-image, default is the original size of style image")
     train_arg_parser.add_argument("--cuda", type=int, required=True,
                                   help="set it to 1 for running on GPU, 0 for CPU")
