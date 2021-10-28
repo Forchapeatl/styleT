@@ -52,7 +52,7 @@ def train(args):
         transforms.ToTensor(),
         transforms.Lambda(lambda x: x.mul(255))
     ])
-    style = utils.load_image(args.style_image, size=args.style_size)
+    style = utils.load_image(args.style_image, size=2.0 * args.style_size)
     style = style_transform(style)
     style = style.repeat(args.batch_size, 1, 1, 1).to(device)
 
@@ -199,8 +199,6 @@ def main():
                                   help="weight for content-loss, default is 1e5")
     train_arg_parser.add_argument("--style-weight", type=float, default=1e10,
                                   help="weight for style-loss, default is 1e10")
-    train_arg_parser.add_argument("--style-scale", type=float, default=2.0,
-                                  help="weight for style-scale, default is 2.0")
     train_arg_parser.add_argument("--lr", type=float, default=1e-3,
                                   help="learning rate, default is 1e-3")
     train_arg_parser.add_argument("--log-interval", type=int, default=500,
